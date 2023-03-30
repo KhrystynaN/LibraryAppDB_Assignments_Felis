@@ -10,7 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class us02_AT_Step_Definitions extends BasePage {
+public class us02_AT_Step_Definitions  {
     LoginPage loginPage = new LoginPage();
     DashBoardPage dashBoardPage = new DashBoardPage();
     String actualBorrowBookNum;
