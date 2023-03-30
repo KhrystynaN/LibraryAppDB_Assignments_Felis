@@ -22,7 +22,6 @@ public class US06_stepDefinitions {
   BookPage bookPage=new BookPage();
     @Given("the {string} on the home page")
     public void the_on_the_home_page(String user) {
-      Driver.getDriver().get(ConfigurationReader.getProperty("library_url"));
       loginPage.login(user);
 
     }
