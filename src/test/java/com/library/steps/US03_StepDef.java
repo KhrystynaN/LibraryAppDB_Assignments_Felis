@@ -43,7 +43,6 @@ public class US03_StepDef {
             DB_Util.runQuery(query);
 
             List<String> expectedBookCategoriesDB = DB_Util.getColumnDataAsList("name");
-            System.out.println("expectedBookCategoriesDB = " + expectedBookCategoriesDB);
 
             Assert.assertEquals(actualBookCategories, expectedBookCategoriesDB);
         }
