@@ -14,16 +14,16 @@ select * FROM books
 where isbn ='The Scrum Field Guide';
 
 select * FROM books
-where name='Head First Java  ';
+where name='Head First Java';
 
 
-select id,name,author from books
+select id,name,author,isbn,year from books
 where name = 'Head First Java';
 
 
-select id,name,author from books
-where name = 'The Scrum Field Guide' and author='Mitch Lacey '
-order by id desc;
+select id,name,author,isbn,year from books
+where name = 'The Scrum Field Guide';
+
 
 
 select count(*)from book_borrow where is_returned=0;

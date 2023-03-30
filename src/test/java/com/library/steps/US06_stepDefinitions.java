@@ -79,12 +79,11 @@ public class US06_stepDefinitions {
     @Then("verify {string} information must match with DB")
     public void verify_information_must_match_with_db(String expectedBookName) {
 
-  String query=("select id,name,author from books where name = '"+expectedBookName+"'");
+  String query=("select id,name,author,isbn,year from books where name = '"+expectedBookName+"'");
 
       DB_Util.runQuery(query);
 
   Map<String,String>rowMap = DB_Util.getRowMap(1);
-
 
       String actualBookName= rowMap.get("name");
       System.out.println("actualBookName = " + actualBookName);
