@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Hooks {
 
-    @Before ("@UI")
+    @Before("@ui")
     public void setUp(){
         System.out.println("this is coming from BEFORE");
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -23,7 +23,7 @@ public class Hooks {
 
     }
 
-    @After ("@UI")
+    @After("@ui")
     public void tearDown(Scenario scenario){
         System.out.println("this is coming from AFTER");
 
@@ -36,17 +36,22 @@ public class Hooks {
 
     }
 
-    @Before ("@db")
+    @Before("@db")
     public void setUpDB(){
-        System.out.println("DB connection is done");
+        System.out.println("DB connection is DONE ");
+
         DB_Util.createConnection();
+
     }
 
-    @After ("@db")
+    @After("@db")
     public void destroyDB(){
-        System.out.println("DB connection is close");
+        System.out.println("DB connection is closed ");
+
         DB_Util.destroy();
+
     }
+
 
 
 }
