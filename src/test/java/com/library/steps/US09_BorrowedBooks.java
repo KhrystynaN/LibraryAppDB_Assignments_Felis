@@ -11,13 +11,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class US09_BorrowedBooks extends BasePage{
+public class US09_BorrowedBooks{
 
 
+    LoginPage loginPage = new LoginPage();
+    DashBoardPage dashBoardPage = new DashBoardPage();
 
-  DashBoardPage dashBoardPage = new DashBoardPage();
-
-  LoginPage loginPage = new LoginPage();
 
   String actualBorrowedBookNumbers;
 
@@ -30,7 +29,7 @@ public class US09_BorrowedBooks extends BasePage{
     public void the_librarian_gets_borrowed_books_number() {
 
         actualBorrowedBookNumbers = dashBoardPage.borrowedBooksNumber.getText();
-        System.out.println("actualBorrowedBookNumbers = " + actualBorrowedBookNumbers);
+
     }
     @Then("borrowed books number information must match with DB")
     public void borrowed_books_number_information_must_match_with_db() {
